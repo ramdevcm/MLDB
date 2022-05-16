@@ -25,14 +25,7 @@ function App() {
 		state: "",
 		zipCode: "",
   });
-  const [ companies, setCompanies ] = useState([]);
   
-  const getCompanies = async () => {
-    const res = await fetch("http://localhost:3001/ads");
-    const data = await res.json(); 
-    setCompanies(data);
-    console.log(data);
-  };
 
   const getNowPlaying = async () => {
     const res = await fetch(API_NowPlaying);
@@ -75,7 +68,6 @@ function App() {
   useEffect((onSearch) => {
     getNowPlaying();
     getSearch(onSearch); 
-    getCompanies();
   }, []);
 
   const onOpacity = (hasOpacity) => {
