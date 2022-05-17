@@ -45,9 +45,9 @@ The database is up and running on an EC2 instance
 connection: {
     host : '13.233.91.196',          // hostname
     port : 3306,                    // port
-    user : 'fasal',                // user name
+    user : 'fasal',                // username
     password : 'password',        // password
-    database : 'mldb'
+    database : 'mldb'            // database name
   }
 ```
 
