@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import validator from 'validator';
 import MLDB_logo from '../MLDB_logo.png';
+import Playlist from '../components/Playlist';
+
 
 function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser, onOpacity }) {
 
@@ -45,6 +47,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 				}), 
 			});
 			const data = await res.json();
+			console.log(data);
 			if (data.userID) {
 				alert('Successful login');
 				setUser({
@@ -339,7 +342,6 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 
 	const openFavModal = () => {
 		
-		onOpacity(true);
 	}
 	return (
 		<div>
@@ -361,7 +363,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 						:
 						<ul>
 							<li><button className="navbar__signout" onClick={ openEditModal }>Edit Profile</button></li>
-							<li><button className="navbar__favlist" onClick={ openFavModal }>Favourites</button></li>
+							<li><button className="navbar__signout" onClick={ openFavModal }>Favourites</button></li>
 							<li><button onClick={ onSignOut } className="navbar__signout" >Sign Out</button></li>
 						</ul>
 					}
@@ -418,8 +420,6 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 					</div>
 				</div>
 			</div>
-
-
 
 			{/* REGISTER MODAL */}
 			<div style={{display: registerDisplay}} className="signinreg__container">
