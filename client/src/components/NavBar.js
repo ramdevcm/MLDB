@@ -36,7 +36,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 		let isValid = validateSignIn();
 		if (isValid) {
 			console.log("--- SUBMITTING SIGN IN FORM ---");
-			const res = await fetch("http://https://fasal-app-ramdev.herokuapp.com:3001/signin", {
+			const res = await fetch("https://fasal-app-ramdev.herokuapp.com:3001/signin", {
 				method: 'post',
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({
@@ -137,7 +137,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 		const isValid = validateReg();
 		if (isValid) {
 			console.log("--- SUBMITTING REGISTER FORM ---");
-			const res = await fetch("http://https://fasal-app-ramdev.herokuapp.com:3001/users", {
+			const res = await fetch("https://fasal-app-ramdev.herokuapp.com:3001/users", {
 				method: 'post',
 				headers: {'Content-Type': 'application/json; charset=utf-8'},
 				body: JSON.stringify({
@@ -255,7 +255,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 		const isValid = validateEdit();
 		if (isValid) {
 			console.log("--- SUBMITTING EDIT PROFILE FORM ---");
-			const res = await fetch("http://https://fasal-app-ramdev.herokuapp.com:3001/users", {
+			const res = await fetch("https://fasal-app-ramdev.herokuapp.com:3001/users", {
 				method: 'put',
 				headers: {'Content-Type': 'application/json; charset=utf-8'},
 				body: JSON.stringify({
@@ -315,7 +315,7 @@ function NavBar({ onSearch, isSignedIn, setIsSignedIn, user, setUser, resetUser,
 		let confirmation = window.confirm("Are you sure you want to delete your account?");
 		if (confirmation) {
 			console.log("--- SUBMITTING DELETE PROFILE FORM ---");
-			const res = await fetch("http://https://fasal-app-ramdev.herokuapp.com:3001/users", {
+			const res = await fetch("https://fasal-app-ramdev.herokuapp.com:3001/users", {
 				method: 'delete',
 				headers: {'Content-Type': 'application/json; charset=utf-8'},
 				body: JSON.stringify({
