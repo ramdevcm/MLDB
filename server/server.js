@@ -25,7 +25,7 @@ app.use('/feedback', feedbackRouter);
 // ================================================================ //
 
 // PORT
-const PORT = 3001 || process.env.PORT;
-app.listen(PORT, () => {
+const PORT = 3001;
+app.listen(process.env.PORT || PORT, () => {
 	console.log(`App running on port ${PORT}`);
 });
