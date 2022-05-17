@@ -39,3 +39,15 @@ The front-end is hosted at Netlify [https://meek-kashata-a70a6e.netlify.app/] (h
 
 The back-end is hosted at Heroku [https://fasal-app-ramdev.herokuapp.com/] (https://fasal-app-ramdev.herokuapp.com/users)
 
+The database is up and running on an EC2 instance
+
+```
+connection: {
+    host : '13.233.91.196',          // hostname
+    port : 3306,                    // port
+    user : 'fasal',                // user name
+    password : 'password',        // password
+    database : 'mldb'
+  }
+```
+
